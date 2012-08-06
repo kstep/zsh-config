@@ -1,3 +1,8 @@
+# Zshell completion system configuration.
+#
+# I use spell corrections in my completions (up to 2 errors) and menu to choose
+# propositions from.
+
 zstyle ':completion:*' completer _expand _complete _approximate
 zstyle ':completion:*' list-colors 'di=34:ln=35:ex=31:so=32:pi=33'
 zstyle ':completion:*' max-errors 2
@@ -8,4 +13,3 @@ zstyle :compinstall filename '/home/kstep/.zshrc'
 autoload -U compinit
 compinit
 
-# vim: filetype=zsh

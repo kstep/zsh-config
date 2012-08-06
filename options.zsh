@@ -1,3 +1,6 @@
+# Zshell options.
+# Mostly self explanatory.
+
 setopt appendhistory
 setopt autocd
 setopt histignoredups
@@ -9,4 +12,3 @@ unsetopt beep
 unsetopt nomatch
 unsetopt chaselinks
 
-# vim: filetype=zsh

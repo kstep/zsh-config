@@ -1,13 +1,23 @@
+# Just an enviroment setup.
+
+# I use **Vim** as my primary editor, `less` as a pager, **Firefox** with
+# **Liberator** addon for browser experience.
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
 export BROWSER="/usr/bin/firefox"
-export NODE_PATH="/usr/lib/node_modules"
-export PATH="/usr/lib/ruby/gems/1.9.1/bin:$PATH:$HOME/bin:/opt/android-sdk/platform-tools"
 export LESS="-r"
 
+# I like playing around with **NodeJS** sometimes.
+export NODE_PATH="/usr/lib/node_modules"
+
+# PATH extension.
+export PATH="/usr/lib/ruby/gems/1.9.1/bin:$PATH:$HOME/bin:/opt/android-sdk/platform-tools"
+
+# This is for Android development.
 export CLASSPATH=/opt/android-sdk/platforms/android-15/android.jar
 
+# Locale. I prefer English messages in programs, but time format is best
+# percieved in d/m/Y, not m/d/Y.
 export LC_ALL=en_US.UTF-8
 export LC_TIME=ru_RU.UTF-8
 
-# vim: filetype=zsh
