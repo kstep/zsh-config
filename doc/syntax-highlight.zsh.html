@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>syntax-highlight.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>syntax-highlight.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>This is a zsh-syntax-highlighting[1] plugin configuration.
+Yes, I like colors in command line.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+<span class="nv">ZSH_HIGHLIGHT_HIGHLIGHTERS</span><span class="o">=(</span>main brackets pattern<span class="o">)</span>
+
+<span class="nb">source</span> /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Highlight MAC addresses, IPs.</p>
+
+</td><td class=code><div class=highlight><pre>
+ZSH_HIGHLIGHT_PATTERNS+<span class="o">=(</span><span class="s1">&#39;[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]&#39;</span> <span class="s1">&#39;fg=yellow&#39;</span><span class="o">)</span>
+ZSH_HIGHLIGHT_PATTERNS+<span class="o">=(</span><span class="s1">&#39;[0-9]##.[0-9]##.[0-9]##.[0-9]##&#39;</span> <span class="s1">&#39;fg=yellow&#39;</span><span class="o">)</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Other custom colors.</p>
+
+</td><td class=code><div class=highlight><pre>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>commandseparator<span class="o">]=</span><span class="s1">&#39;fg=blue&#39;</span>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>reserved-word<span class="o">]=</span><span class="s1">&#39;fg=magenta,bold&#39;</span>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>single-quoted-argument<span class="o">]=</span><span class="s1">&#39;fg=magenta&#39;</span>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>double-quoted-argument<span class="o">]=</span><span class="s1">&#39;fg=magenta&#39;</span>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>assign<span class="o">]=</span><span class="s1">&#39;fg=cyan&#39;</span>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>single-hyphen-option<span class="o">]=</span><span class="s1">&#39;fg=cyan&#39;</span>
+ZSH_HIGHLIGHT_STYLES<span class="o">[</span>double-hyphen-option<span class="o">]=</span><span class="s1">&#39;fg=cyan&#39;</span>
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

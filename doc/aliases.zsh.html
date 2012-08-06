@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>aliases.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>aliases.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>Here come common aliases.
+First <code>ls</code> aliases as I used to use them all the time.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+<span class="nb">alias </span><span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+<span class="nb">alias </span><span class="nv">lf</span><span class="o">=</span><span class="s1">&#39;ls -F&#39;</span>
+<span class="nb">alias </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -lF&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>This is a very old alias for <code>ps ... | grep</code>, I started using it on FreeBSD,
+and the power of habit is so strong, I can't stop using it.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">psg</span><span class="o">=</span><span class="s1">&#39;ps aux | grep&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>A set of <code>find</code> related aliases for maximum search convinience.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">ff</span><span class="o">=</span><span class="s1">&#39;find . -xdev -name&#39;</span>
+<span class="nb">alias</span> -g -- -grep<span class="o">=</span><span class="s1">&#39;-exec grep&#39;</span>
+<span class="nb">alias</span> -g -- -all<span class="o">=</span><span class="s1">&#39;{} +&#39;</span>
+<span class="nb">alias</span> -g -- -one<span class="o">=</span><span class="s1">&#39;{} \;&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>All <code>diff</code>s must be in unified format.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">diff</span><span class="o">=</span><span class="s1">&#39;diff -u&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Password generator alias.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">mkpass</span><span class="o">=</span><span class="s1">&#39;pwgen 12 1&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Default options for essential file management commands.
+<code>rm</code> and <code>mv</code> are so dangerous, they must always ask for confirmation.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;rm -i&#39;</span>
+<span class="nb">alias </span><span class="nv">mv</span><span class="o">=</span><span class="s1">&#39;mv -i&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>I like colors!</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Super fast search in my home directory.
+I support locate database in ~/.locatedb with my home dir contents
+for fastest search possible.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">loc</span><span class="o">=</span><span class="s1">&#39;locate -d ~/.locatedb -e&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Just a shortcut to <code>source</code>. Yes, it's a habit as well.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias </span><span class="nv">so</span><span class="o">=</span><span class="s1">&#39;.&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Global aliases for syntax highlighting.</p>
+
+<p>Usage:
+    # Highlight logs
+    tail -f /var/log/nginx.log CL</p>
+
+<pre><code># Highlight any pipe output with given language
+cat myscript.sh C sh
+
+# Color-cat any file, can fail if can't guess language
+# from file extension
+ccat myscript.sh
+</code></pre>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias</span> -g <span class="nv">CL</span><span class="o">=</span><span class="s1">&#39;| source-highlight --outlang-def=esc.outlang --style-file=esc.style -s log&#39;</span>
+<span class="nb">alias</span> -g <span class="nv">C</span><span class="o">=</span><span class="s1">&#39;| source-highlight --outlang-def=esc.outlang --style-file=esc.style -s&#39;</span>
+<span class="nb">alias </span><span class="nv">ccat</span><span class="o">=</span><span class="s1">&#39;source-highlight --outlang-def=esc.outlang --style-file=esc.style -i&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Suffix aliases.
+Run <code>*.jar</code> files with JVM.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">alias</span> -s <span class="nv">jar</span><span class="o">=</span><span class="s1">&#39;java -jar&#39;</span>
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

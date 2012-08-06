@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>git.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>git.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>This is my <code>vcs_info</code> zsh plugin configuration.
+I use <code>git</code> only, here I enable it.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> <span class="nb">enable </span>git
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Stage and unstage markers.</p>
+
+</td><td class=code><div class=highlight><pre>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> unstagedstr <span class="s1">&#39;?&#39;</span>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> stagedstr <span class="s1">&#39;+&#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Banners format.</p>
+
+</td><td class=code><div class=highlight><pre>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> formats <span class="s1">&#39;@%b%u%c&#39;</span>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> actionformats <span class="s1">&#39;@%b%u%c:%a&#39;</span>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> check-for-changes <span class="nb">true</span>
+
+autoload -Uz vcs_info
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Actual information update is here.</p>
+
+</td><td class=code><div class=highlight><pre>
+precmd <span class="o">()</span>
+<span class="o">{</span>
+    vcs_info
+    <span class="k">return </span>0;
+<span class="o">}</span>
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

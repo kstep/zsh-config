@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>completion.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>completion.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>Zshell completion system configuration.</p>
+
+<p>I use spell corrections in my completions (up to 2 errors) and menu to choose
+propositions from.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+zstyle <span class="s1">&#39;:completion:*&#39;</span> completer _expand _complete _approximate
+zstyle <span class="s1">&#39;:completion:*&#39;</span> list-colors <span class="s1">&#39;di=34:ln=35:ex=31:so=32:pi=33&#39;</span>
+zstyle <span class="s1">&#39;:completion:*&#39;</span> max-errors 2
+zstyle <span class="s1">&#39;:completion:*&#39;</span> menu <span class="k">select</span><span class="o">=</span>long-list <span class="k">select</span><span class="o">=</span>0
+zstyle <span class="s1">&#39;:completion:*&#39;</span> <span class="k">select</span>-prompt <span class="s1">&#39;%SScrolling active: current selection at %p%s&#39;</span>
+zstyle :compinstall filename <span class="s1">&#39;/home/kstep/.zshrc&#39;</span>
+
+autoload -U compinit
+compinit
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

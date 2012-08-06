@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>keybindings.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>keybindings.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>Keyboard bindings.
+First we load keymap for current terminal type.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+autoload -Uz zkbd
+<span class="nb">source</span> <span class="nv">$HOME</span>/.zkbd/<span class="nv">$TERM</span>-<span class="nv">$VENDOR</span>-<span class="nv">$OSTYPE</span> <span class="o">||</span> <span class="nv">DISPLAY</span><span class="o">=</span> zkbd
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>I like <strong>Vim</strong> very much, but modal editing in command line
+feels a little masochistic, hence <strong>Emacs</strong> mode here.</p>
+
+</td><td class=code><div class=highlight><pre>
+bindkey -e
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p><code>Home</code> and <code>End</code> keys are used from time to time.</p>
+
+</td><td class=code><div class=highlight><pre>
+bindkey <span class="k">${</span><span class="nv">key</span><span class="p">[Home]</span><span class="k">}</span> vi-beginning-of-line
+bindkey <span class="k">${</span><span class="nv">key</span><span class="p">[End]</span><span class="k">}</span> vi-end-of-line
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>I like fast search feature. This way I need to type a few first letters of a
+command and just press <code>Up</code> or <code>Down</code> to look through history filtered
+by the prefix.</p>
+
+</td><td class=code><div class=highlight><pre>
+bindkey <span class="k">${</span><span class="nv">key</span><span class="p">[Up]</span><span class="k">}</span> up-line-or-search
+bindkey <span class="k">${</span><span class="nv">key</span><span class="p">[Down]</span><span class="k">}</span> down-line-or-search
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Standard history search keybinding.</p>
+
+</td><td class=code><div class=highlight><pre>
+bindkey <span class="s2">&quot;^R&quot;</span> <span class="nb">history</span>-incremental-search-backward
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

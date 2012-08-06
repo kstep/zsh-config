@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>environment.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>environment.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>Just an enviroment setup.
+I use <strong>Vim</strong> as my primary editor, <code>less</code> as a pager, <strong>Firefox</strong> with
+<strong>Liberator</strong> addon for browser experience.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span><span class="s2">&quot;/usr/bin/vim&quot;</span>
+<span class="nb">export </span><span class="nv">PAGER</span><span class="o">=</span><span class="s2">&quot;/usr/bin/less&quot;</span>
+<span class="nb">export </span><span class="nv">BROWSER</span><span class="o">=</span><span class="s2">&quot;/usr/bin/firefox&quot;</span>
+<span class="nb">export </span><span class="nv">LESS</span><span class="o">=</span><span class="s2">&quot;-r&quot;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>I like playing around with <strong>NodeJS</strong> sometimes.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">export </span><span class="nv">NODE_PATH</span><span class="o">=</span><span class="s2">&quot;/usr/lib/node_modules&quot;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>PATH extension.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/lib/ruby/gems/1.9.1/bin:$PATH:$HOME/bin:/opt/android-sdk/platform-tools&quot;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>This is for Android development.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">export </span><span class="nv">CLASSPATH</span><span class="o">=</span>/opt/android-sdk/platforms/android-15/android.jar
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>Locale. I prefer English messages in programs, but time format is best
+percieved in d/m/Y, not m/d/Y.</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">export </span><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export </span><span class="nv">LC_TIME</span><span class="o">=</span>ru_RU.UTF-8
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

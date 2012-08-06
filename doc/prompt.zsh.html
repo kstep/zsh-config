@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>prompt.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>prompt.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>This is prompt configuration file.</p>
+
+<p>It's history is very long, I experiment with my prompt from time to time.</p>
+
+<p>My current prompt looks like this now:</p>
+
+<pre><code>[~/.zsh@master?+:pts/6]
+ 1----&gt;-2----&gt;34-5---&gt;
+</code></pre>
+
+<ol>
+<li>My current path, up to 5 directories, if longer, only last five
+directories are visible, and upper directories are replaced with <code>…</code> character.</li>
+<li>My current <code>git</code> branch, omitted if current directory is not a git repository.</li>
+<li>Question mark means there're unstaged changes in my git workdir.</li>
+<li>Plus sign means there're staged but uncommitted changes in my git workdir.</li>
+<li>This is my current terminal name.</li>
+</ol>
+
+<p>My prompt is colorful as well, but I can't show colors here, so just beleave me =)</p>
+
+</td><td class=code><div class=highlight><pre>
+
+<span class="c">#export RPROMPT=$&#39;%(0?..%{$fg_bold[red]%}[%?]%{$reset_color%})[ %{$fg_bold[red]%}%5(~.….)%4~%{$fg_no_bold[cyan]%}${vcs_info_msg_0_}%{$reset_color%} ][ %{$fg_bold[green]%}%n@%{$fg_bold[blue]%}%m%{$reset_color%} %{$fg_bold[magenta]%}%l%{$reset_color%} ]&#39;</span>
+<span class="c">#export RPROMPT=$&#39;[%{$fg_bold[red]%}%5(~.….)%4~%{$fg_no_bold[cyan]%}${vcs_info_msg_0_}%{$fg_bold[magenta]%}:%l%{$reset_color%}]&#39;</span>
+<span class="nb">export </span><span class="nv">PROMPT</span><span class="o">=</span><span class="s1">$&#39;%{$fg_no_bold[cyan]%}[%{$fg_bold[red]%}%5(~.….)%4~%{$fg_no_bold[cyan]%}${vcs_info_msg_0_}%{$fg_bold[magenta]%}:%l%{$fg_no_bold[cyan]%}]%{$reset_color%}%(0?..%{$fg_bold[red]%}[%?]%{$reset_color%}) &#39;</span>
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>This is a replacement for EOL sign if output is missing last NL character.
+Example:</p>
+
+<pre><code>$ echo -n 123
+123↲
+</code></pre>
+
+<p>Default is percent sign <code>%</code>, but I like fancy Unicode characters =)</p>
+
+</td><td class=code><div class=highlight><pre>
+<span class="nb">export </span><span class="nv">PROMPT_EOL_MARK</span><span class="o">=</span><span class="s1">$&#39;%{$bg[cyan]%}%{$fg_no_bold[black]%}↲%{$reset_color%}&#39;</span>
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

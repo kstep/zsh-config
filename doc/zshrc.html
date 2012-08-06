@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>zshrc</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>zshrc</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>This is the base of my Zshell configuration.
+To install this configuration, symlink this file to ~/.zshrc:</p>
+
+<pre><code>ln -s ~/.zsh/zshrc ~/.zshrc
+</code></pre>
+
+<p>This file just loads all <code>*.zsh</code> files from <code>~/.zsh</code> directory.
+Please don't modify it directly, put your custom config files into <code>~/.zsh</code>
+with appropriate name and <code>zsh</code> extension.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+<span class="k">for </span>conf in ~/.zsh/*.zsh; <span class="k">do</span>
+<span class="k">    </span><span class="nb">source</span> <span class="nv">$conf</span>
+<span class="k">done</span>
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>

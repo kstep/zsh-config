@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8'>
+    <title>cli.zsh</title>
+    <link rel=stylesheet href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id=container>
+    <div id=background></div>
+    <table cellspacing=0 cellpadding=0>
+    <thead>
+      <tr>
+        <th class=docs><h1>cli.zsh</h1></th>
+        <th class=code></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr><td class='docs'><p>This is a command line configuration file.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+autoload -U edit-command-line
+zle -N edit-command-line
+
+</pre></div></td></tr><tr><td class=docs>
+
+<p>History file confugration goes below.
+This is self explanatory, I hope.</p>
+
+</td><td class=code><div class=highlight><pre>
+
+<span class="nv">HISTFILE</span><span class="o">=</span>~/.histfile
+<span class="nv">HISTSIZE</span><span class="o">=</span>10000
+<span class="nv">SAVEHIST</span><span class="o">=</span>5000
+
+
+
+</pre></div></td></tr><tr><td class=docs>
+
+</td><td class=code><div class=highlight><pre>
+
+</pre></div></td></tr><tr><td class=docs></td><td class='code'></td></tr>
+    </tbody>
+    </table>
+</div>
+</body>
+</html>
