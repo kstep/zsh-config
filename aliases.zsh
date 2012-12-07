@@ -5,6 +5,9 @@ alias ls='ls --color=auto'
 alias lf='ls -F'
 alias ll='ls -lF'
 
+# I use git constantly, so I put this alias here.
+alias g='git'
+
 # This is a very old alias for `ps ... | grep`, I started using it on FreeBSD,
 # and the power of habit is so strong, I can't stop using it.
 alias psg='ps aux | grep'
