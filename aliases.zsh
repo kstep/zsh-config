@@ -57,6 +57,9 @@ alias -g CL='| source-highlight --outlang-def=esc.outlang --style-file=esc.style
 alias -g C='| source-highlight --outlang-def=esc.outlang --style-file=esc.style -s'
 alias ccat='source-highlight --outlang-def=esc.outlang --style-file=esc.style -i'
 
+# System management aliases to avoid typing long `sudo something` commands.
+alias sv='sudo systemctl'
+
 # Suffix aliases.
 # Run `*.jar` files with JVM.
 alias -s jar='java -jar'
