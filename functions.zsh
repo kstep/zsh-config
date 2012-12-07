@@ -16,8 +16,9 @@ function psq () {
 # directories hierarchy, the environment must be deployed in `env`
 # directory. If it finds it, it activates the virtualenv.
 function activate () {
-    dir=$(back env/bin/activate) || return
-    source $dir/env/bin/activate
+    env=${1:-env}
+    dir=$(back $env/bin/activate) || return
+    source $dir/$env/bin/activate
 }
 
 # Backward directory search.
