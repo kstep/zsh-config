@@ -71,3 +71,10 @@ function pmver() {
     perl -M$1 -E "say \$$1::VERSION;"
 }
 
+# The function to fetch SSL certificate from remote host.
+# Example usage is `cert secure.example.com` or `cert secure.example.com 443`,
+# second argument is port number, it's optional and defaults to 443.
+function cert() {
+    openssl s_client -connect ${1}:${2:-443} </dev/null 2>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
+}
+
