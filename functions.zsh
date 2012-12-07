@@ -1,5 +1,11 @@
 # Functions are defined here.
 
+# Find + grep combination I use very often.
+# First argument is file template, sencond is pattern to search.
+function ffg () {
+    find . -name "$1" -exec grep "$2" {} +
+}
+
 # This is like `psg`, but excludes `grep` process from output.
 function psq () {
     ps aux | grep [${1:0:1}]${1:1}
