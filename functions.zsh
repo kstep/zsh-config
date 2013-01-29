@@ -78,3 +78,10 @@ function cert() {
     openssl s_client -connect ${1}:${2:-443} </dev/null 2>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
 }
 
+# The function to run MPlayer from console via fbdev
+function cplayer() {
+    setterm -cursor off
+    mplayer -vo fbdev2 -vf scale=1600:900 -quiet $*
+    setterm -cursor on
+}
+
