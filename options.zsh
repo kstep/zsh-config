@@ -4,6 +4,7 @@
 setopt appendhistory
 setopt autocd
 setopt histignoredups
+setopt histignorespace
 setopt extendedglob
 setopt histreduceblanks
 setopt promptsubst
