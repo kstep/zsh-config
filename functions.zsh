@@ -81,7 +81,7 @@ function cert() {
 # The function to run MPlayer from console via fbdev
 function cplayer() {
     setterm -cursor off
-    mplayer -vo fbdev2 -vf scale=1600:900 -quiet $*
+    mplayer -vo fbdev2 -vf scale=1600:900 -quiet -heartbeat-cmd 'setterm -blank poke' $*
     setterm -cursor on
 }
 
