@@ -7,7 +7,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Highlight MAC addresses, IPs.
 ZSH_HIGHLIGHT_PATTERNS+=('[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]' 'fg=yellow')
-ZSH_HIGHLIGHT_PATTERNS+=('[0-9]##.[0-9]##.[0-9]##.[0-9]##' 'fg=yellow')
+ZSH_HIGHLIGHT_PATTERNS+=(' [0-9]##.[0-9]##.[0-9]##.[0-9]##' 'fg=yellow')
 
 # Other custom colors.
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=blue'
