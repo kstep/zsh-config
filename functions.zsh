@@ -52,17 +52,17 @@ function back () {
 # Very simple `bc` wrapper.
 # Just type `bcc 2+2*2` to calculate.
 function bcc() {
-	echo scale=5\;$@ | bc
+    echo scale=5\;$@ | bc
 }
 
 # Colorized `tail -f` shortcut.
 function tf() {
-	tailf $@ CL
+    tailf $@ CL
 }
 
 # I use `vim` to read man pages.
 function man() {
-        \vim -c ":RMan $*" -c ":redraw!"
+    \vim -c ":RMan $*" -c ":redraw!"
 }
 
 # This function is to tell me version of arbitrary perl module. Just type
