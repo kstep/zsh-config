@@ -9,6 +9,11 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ZSH_HIGHLIGHT_PATTERNS+=('[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]' 'fg=yellow')
 ZSH_HIGHLIGHT_PATTERNS+=(' [0-9]##.[0-9]##.[0-9]##.[0-9]##' 'fg=yellow')
 
+# Highlight complex redirection signes.
+ZSH_HIGHLIGHT_PATTERNS+=('[0-9]#[<>]&[-!|0-9]#' 'fg=blue')
+ZSH_HIGHLIGHT_PATTERNS+=('[<>]([<>]|)([|!]|)' 'fg=blue')
+ZSH_HIGHLIGHT_PATTERNS+=('&[|!]' 'fg=blue')
+
 # Other custom colors.
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=blue'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=magenta,bold'
