@@ -1,7 +1,7 @@
 # The script stores dirs stack into given file and restore it on shell start.
 
 # First we configure this feature.
-DIRSTACKSIZE=9
+DIRSTACKSIZE=40
 DIRSTACKFILE=~/.zdirs
 
 # The load dirs into stack from given file.
