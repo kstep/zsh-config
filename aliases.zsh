@@ -64,4 +64,4 @@ alias sv='sudo systemctl'
 # Suffix aliases.
 # Run `*.jar` files with JVM.
 alias -s jar='java -jar'
-
+alias -s jnlp='javaws'
