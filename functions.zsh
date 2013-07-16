@@ -85,3 +85,8 @@ function cplayer() {
     setterm -cursor on
 }
 
+# With this function I can run Google search from command line!
+function gg() {
+    xdg-open "http://www.google.com/search?q=$*"
+}
+
