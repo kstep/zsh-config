@@ -90,3 +90,17 @@ function gg() {
     xdg-open "http://www.google.com/search?q=$*"
 }
 
+# Copy with verbose statistics using "cp"
+function cpv() {
+    if [ $# -ne 2 ] || [ ! -f "$1" ]; then
+        echo "Usage:"
+        echo "  cpv <file> <file|directory>"
+        return 1
+    fi
+
+    if [ -d "$2" ]; then
+        pv "$1" > "$2/$(basename "$1")"
+    else
+        pv "$1" > "$2"
+    fi
+}
