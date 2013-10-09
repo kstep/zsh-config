@@ -65,6 +65,9 @@ alias -g CL='| source-highlight --outlang-def=esc.outlang --style-file=esc.style
 alias -g C='| source-highlight --outlang-def=esc.outlang --style-file=esc.style -s'
 alias ccat='source-highlight --outlang-def=esc.outlang --style-file=esc.style -i'
 
+# This is an alias to put data into X clipboard from command line
+alias -g XC='| xclip -selection clipboard -i'
+
 # System management aliases to avoid typing long `sudo something` commands.
 alias sv='sudo systemctl'
 
