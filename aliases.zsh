@@ -5,6 +5,13 @@ alias ls='ls --color=auto'
 alias lf='ls -F'
 alias ll='ls -lF'
 
+# Change directory aliases
+alias cd.='cd ..'
+alias cd..='cd ../..'
+alias cd...='cd ../../..'
+alias cd....='cd ../../../..'
+alias cd.....='cd ../../../../..'
+
 # I use git and vim constantly, so I put these aliases here.
 alias g='git'
 alias v='vim'
