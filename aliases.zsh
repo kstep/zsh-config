@@ -48,6 +48,9 @@ alias loc='locate -d ~/.locatedb -e'
 # Just a shortcut to `source`. Yes, it's a habit as well.
 alias so='.'
 
+# Truncate a file without hassle.
+alias trunc='truncate -s 0'
+
 # Global aliases for syntax highlighting.
 #
 # Usage:
