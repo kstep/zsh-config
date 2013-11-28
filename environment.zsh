@@ -1,10 +1,10 @@
 # Just an enviroment setup.
 
-# I use **Vim** as my primary editor, `less` as a pager, **Firefox** with
-# **Liberator** addon for browser experience.
+# I use **Vim** as my primary editor, `less` as a pager, **Chromium** with
+# **Vimium** extension for browser experience.
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
-export BROWSER="/usr/bin/firefox"
+export BROWSER="/usr/bin/chromium"
 export LESS="-r"
 
 # I like playing around with **NodeJS** sometimes.
