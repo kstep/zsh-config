@@ -81,3 +81,9 @@ alias sv='sudo systemctl'
 # Run `*.jar` files with JVM.
 alias -s jar='java -jar'
 alias -s jnlp='javaws'
+
+# Run simple web server from current directory to serve media files
+# in a quick-n-dirty way.
+function bcast {
+    twistd -no web --path="${1:-.}"
+}
