@@ -14,7 +14,7 @@ export NODE_PATH="/usr/lib/node_modules"
 export PATH="/usr/lib/ruby/gems/1.9.1/bin:$PATH:$HOME/bin:/opt/android-sdk/platform-tools"
 
 # This is for Android development.
-export CLASSPATH=/opt/android-sdk/platforms/android-15/android.jar
+export CLASSPATH=/opt/android-sdk/platforms/android-19/android.jar
 
 # Locale. I prefer English messages in programs, but time format is best
 # percieved in d/m/Y, not m/d/Y.
