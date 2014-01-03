@@ -30,7 +30,7 @@ alias -g -- -one='{} \;'
 alias diff='diff -u'
 
 # Password generator alias.
-alias mkpass='pwgen 12 1'
+alias mkpass='pwgen -C -n 12 1'
 
 # Default options for essential file management commands.
 # `rm` and `mv` are so dangerous, they must always ask for confirmation.
