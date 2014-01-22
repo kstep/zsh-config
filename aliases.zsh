@@ -83,6 +83,9 @@ alias sv='sudo systemctl'
 alias -s jar='java -jar'
 alias -s jnlp='javaws'
 
+# Simple calculator alias for `zcalc`
+alias zc='zcalc -e'
+
 # Run simple web server from current directory to serve media files
 # in a quick-n-dirty way.
 function bcast {
