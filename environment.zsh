@@ -25,3 +25,5 @@ export LC_TIME=ru_RU.UTF-8
 export CHROMIUM_USER_FLAGS="--disk-cache-dir=/tmp --disk-cache-size=50000000 --ignore-certificate-errors"
 export CHROME_USER_FLAGS="$CHROMIUM_USER_FLAGS"
 
+# This is the placement of todo.sh config file
+export TODOTXT_CFG_FILE="$HOME/.config/todo/config"
