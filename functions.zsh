@@ -104,3 +104,8 @@ function cpv() {
         pv "$1" > "$2"
     fi
 }
+
+# Sleep till given date/time, as accepted by `date -d`
+function sleeptill() {
+    sleep $(( $(date -d "$1" +%s) - $(date +%s) ))
+}
