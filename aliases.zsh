@@ -77,6 +77,8 @@ alias -g BG='2>&- >&- &|'
 
 # System management aliases to avoid typing long `sudo something` commands.
 alias sv='sudo systemctl'
+alias jc='journalctl'
+alias jv='journalctl --unit'
 
 # Suffix aliases.
 # Run `*.jar` files with JVM.
