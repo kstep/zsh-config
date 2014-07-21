@@ -10,6 +10,9 @@ bindkey '^N' down-history
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 
+bindkey ${key[Up]} up-line-or-search
+bindkey ${key[Down]} down-line-or-search
+
 # Reduce timeout to switch to command mode to 0.1 sec
 export KEYTIMEOUT=1
 
