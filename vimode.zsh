@@ -13,6 +13,9 @@ bindkey '^E' end-of-line
 bindkey ${key[Up]} up-line-or-search
 bindkey ${key[Down]} down-line-or-search
 
+# Pressing `v` in command mode brings in Vim to edit command line
+bindkey -M vicmd v edit-command-line
+
 # Reduce timeout to switch to command mode to 0.1 sec
 export KEYTIMEOUT=1
 
