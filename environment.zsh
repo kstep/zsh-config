@@ -22,7 +22,7 @@ export LC_ALL=en_US.UTF-8
 export LC_TIME=ru_RU.UTF-8
 
 # Chrome & chromium options: move cache to tmpfs.
-export CHROMIUM_USER_FLAGS="--disk-cache-dir=/tmp --disk-cache-size=50000000 --ignore-certificate-errors"
+export CHROMIUM_USER_FLAGS="--disk-cache-dir=/tmp --disk-cache-size=50000000"
 export CHROME_USER_FLAGS="$CHROMIUM_USER_FLAGS"
 
 # This is the placement of todo.sh config file
