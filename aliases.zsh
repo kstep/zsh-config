@@ -78,7 +78,8 @@ alias -g XC='| xclip -selection clipboard -i'
 alias -g BG='2>&- >&- &|'
 
 # System management aliases to avoid typing long `sudo something` commands.
-alias sv='sudo systemctl'
+alias sc='sudo systemctl'
+alias suc='systemctl --user'
 alias jc='journalctl'
 alias jv='journalctl --unit'
 
