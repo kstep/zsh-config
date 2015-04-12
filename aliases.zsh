@@ -72,7 +72,7 @@ alias -g C='| source-highlight --outlang-def=esc.outlang --style-file=esc.style 
 alias ccat='source-highlight --outlang-def=esc.outlang --style-file=esc.style -i'
 
 # This is an alias to put data into X clipboard from command line
-alias -g XC='| xclip -selection clipboard -i'
+alias -g XC='| xsel --clipboard --input'
 
 # Global alias to run command in background
 alias -g BG='2>&- >&- &|'
