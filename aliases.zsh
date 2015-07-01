@@ -18,6 +18,8 @@ alias v='vim'
 alias t='todo.sh'
 alias c='cargo'
 alias s='sbt'
+alias va='vagrant'
+alias d='docker'
 
 # This is a very old alias for `ps ... | grep`, I started using it on FreeBSD,
 # and the power of habit is so strong, I can't stop using it.
