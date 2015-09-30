@@ -4,7 +4,7 @@
 # **Vimium** extension for browser experience.
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
-export BROWSER="/usr/bin/google-chrome-beta"
+export BROWSER="/usr/bin/chromium"
 export LESS="-r -S"
 
 # I like playing around with **NodeJS** sometimes.
