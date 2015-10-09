@@ -50,7 +50,7 @@ preexec() {
     typeset -g prompt_pure_cmd_timestamp=$EPOCHSECONDS
 }
 
-export PROMPT=$'%F{cyan} — %F{green}%5(~.….)%4~%F{242}${vcs_info_msg_0_}%F{magenta} %l%F{cyan}%(0?..%F{red}‹%?›)%F{yellow}${prompt_pure_human_time}%f: '
+export PROMPT=$'%F{cyan} — %F{green}%5(~.….)%4~%F{242}${vcs_info_msg_0_}%F{magenta} %l%(0?..%F{red}‹%?›)%F{yellow}${prompt_pure_human_time}%f: '
 
 #
 # This is a replacement for EOL sign if output is missing last NL character.
