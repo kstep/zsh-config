@@ -50,8 +50,6 @@ preexec() {
     typeset -g prompt_pure_cmd_timestamp=$EPOCHSECONDS
 }
 
-#export RPROMPT=$'%(0?..%{$fg_bold[red]%}[%?]%{$reset_color%})[ %{$fg_bold[red]%}%5(~.….)%4~%{$fg_no_bold[cyan]%}${vcs_info_msg_0_}%{$reset_color%} ][ %{$fg_bold[green]%}%n@%{$fg_bold[blue]%}%m%{$reset_color%} %{$fg_bold[magenta]%}%l%{$reset_color%} ]'
-#export RPROMPT=$'[%{$fg_bold[red]%}%5(~.….)%4~%{$fg_no_bold[cyan]%}${vcs_info_msg_0_}%{$fg_bold[magenta]%}:%l%{$reset_color%}]'
 export PROMPT=$'%F{cyan} — %F{green}%5(~.….)%4~%F{242}${vcs_info_msg_0_}%F{magenta} %l%F{cyan}%(0?..%F{red}‹%?›)%F{yellow}${prompt_pure_human_time}%f: '
 
 #
