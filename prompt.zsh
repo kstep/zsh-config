@@ -33,17 +33,21 @@ prompt_pure_human_time() {
     typeset -g "$var"="$human"
 }
 
-prompt_pure_cmd_timestamp=$EPOCHSECONDS
 prompt_pure_check_cmd_exec_time() {
     integer elapsed
     (( elapsed = EPOCHSECONDS - ${prompt_pure_cmd_timestamp:-$EPOCHSECONDS} ))
-    typeset -g prompt_pure_cmd_timestamp=$EPOCHSECONDS
     prompt_pure_human_time=
+    typeset -g prompt_pure_cmd_timestamp=
     (( elapsed > ${PURE_CMD_MAX_EXEC_TIME:=5} )) && { prompt_pure_human_time $elapsed prompt_pure_human_time }
 }
 
 precmd() {
     prompt_pure_check_cmd_exec_time
+    vcs_info
+}
+
+preexec() {
+    typeset -g prompt_pure_cmd_timestamp=$EPOCHSECONDS
 }
 
 #export RPROMPT=$'%(0?..%{$fg_bold[red]%}[%?]%{$reset_color%})[ %{$fg_bold[red]%}%5(~.….)%4~%{$fg_no_bold[cyan]%}${vcs_info_msg_0_}%{$reset_color%} ][ %{$fg_bold[green]%}%n@%{$fg_bold[blue]%}%m%{$reset_color%} %{$fg_bold[magenta]%}%l%{$reset_color%} ]'
