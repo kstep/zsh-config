@@ -4,14 +4,14 @@
 #
 # My current prompt looks like this now:
 #
-#     [~/.zsh@master?+:pts/6]
-#      1---->-2---->34-5--->
+#      — ~/.config/zsh master?! pts/4:
+#        1----------->-2---->34-5--->
 #
 # 1. My current path, up to 5 directories, if longer, only last five
 # directories are visible, and upper directories are replaced with `…` character.
 # 2. My current `git` branch, omitted if current directory is not a git repository.
 # 3. Question mark means there're unstaged changes in my git workdir.
-# 4. Plus sign means there're staged but uncommitted changes in my git workdir.
+# 4. Exclamation sign means there're staged but uncommitted changes in my git workdir.
 # 5. This is my current terminal name.
 #
 # My prompt is colorful as well, but I can't show colors here, so just beleave me =)
