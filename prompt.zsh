@@ -41,9 +41,28 @@ prompt_pure_check_cmd_exec_time() {
     (( elapsed > ${PURE_CMD_MAX_EXEC_TIME:=5} )) && { prompt_pure_human_time $elapsed prompt_pure_human_time }
 }
 
+ASYNC_PROMPT_PROC=0
 precmd() {
     prompt_pure_check_cmd_exec_time
-    vcs_info
+
+    async() {
+        vcs_info
+        echo "vcs_info_msg_0_='$vcs_info_msg_0_'" > /tmp/prompt.zsh
+        kill -s USR1 $$
+    }
+
+    if [[ "$ASYNC_PROMPT_PROC" != 0 ]]; then
+        kill -s HUP "$ASYNC_PROMPT_PROC" >/dev/null 2>&1 || :
+    fi
+
+    async &!
+    ASYNC_PROMPT_PROC=$!
+}
+
+TRAPUSR1() {
+    ASYNC_PROMPT_PROC=0
+    source /tmp/prompt.zsh
+    zle && zle reset-prompt
 }
 
 preexec() {
