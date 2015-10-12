@@ -2,7 +2,7 @@
 
 # First we configure this feature.
 DIRSTACKSIZE=40
-DIRSTACKFILE=~/.zdirs
+DIRSTACKFILE=~/.cache/zsh/dirstack
 
 # The load dirs into stack from given file.
 if [[ -f $DIRSTACKFILE && $#dirstack -eq 0 ]]; then
