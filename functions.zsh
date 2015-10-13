@@ -90,6 +90,11 @@ function gg() {
     xdg-open "http://www.google.com/search?q=$*"
 }
 
+# Google's "I'm feeling lucky" search shortcut
+function ifl() {
+    xdg-open "https://www.google.com/search?btnI=1&q=$*"
+}
+
 # Copy with verbose statistics using "cp"
 function cpv() {
     if [ $# -ne 2 ] || [ ! -f "$1" ]; then
