@@ -62,6 +62,7 @@ precmd() {
 TRAPUSR1() {
     ASYNC_PROMPT_PROC=0
     source /tmp/prompt-$$.zsh
+    rm -rf /tmp/prompt-$$.zsh
     zle && zle reset-prompt
 }
 
