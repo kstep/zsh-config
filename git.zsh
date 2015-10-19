@@ -13,11 +13,3 @@ zstyle ':vcs_info:*' actionformats ' %b%u%c:%a'
 zstyle ':vcs_info:*' check-for-changes true
 
 autoload -Uz vcs_info
-
-# Actual information update is here.
-precmd ()
-{
-    vcs_info
-    return 0;
-}
-
