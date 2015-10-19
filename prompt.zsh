@@ -47,7 +47,7 @@ precmd() {
 
     async() {
         vcs_info
-        echo "vcs_info_msg_0_='$vcs_info_msg_0_'" > /tmp/prompt.zsh
+        echo "vcs_info_msg_0_='$vcs_info_msg_0_'" > /tmp/prompt-$$.zsh
         kill -s USR1 $$
     }
 
@@ -61,7 +61,7 @@ precmd() {
 
 TRAPUSR1() {
     ASYNC_PROMPT_PROC=0
-    source /tmp/prompt.zsh
+    source /tmp/prompt-$$.zsh
     zle && zle reset-prompt
 }
 
