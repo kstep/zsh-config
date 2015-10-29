@@ -12,6 +12,6 @@ fi
 
 # At last we add a function to store dirs stack on dir change.
 function chpwd () {
-    print -l ${(uOa)dirstack} $PWD > $DIRSTACKFILE
+    print -l $PWD ${(u)dirstack} > $DIRSTACKFILE
 }
 
