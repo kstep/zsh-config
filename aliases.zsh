@@ -94,6 +94,9 @@ alias -s jnlp='javaws'
 # Simple calculator alias for `zcalc`
 alias zc='zcalc -e'
 
+# Calendar customization
+alias cal='cal -m'
+
 # Use mplayer to identify media file content
 alias mpid='mplayer -identify -frames 0 -really-quiet'
 
