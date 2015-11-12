@@ -103,6 +103,10 @@ alias mpid='mplayer -identify -frames 0 -really-quiet'
 # Show raw hex content of a file
 alias hex='hexdump -ve '\''1/1 "%02x"'\'
 
+# Android aliases
+alias pm='adb shell pm'
+alias am='adb shell am'
+
 # Run simple web server from current directory to serve media files
 # in a quick-n-dirty way.
 function bcast {
