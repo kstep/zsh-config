@@ -17,7 +17,8 @@ alias cd.......='cd ../../../../../../..'
 
 # I use git, todo.sh and vim constantly, so I put these aliases here.
 alias g='git'
-alias v='vim'
+#alias v='vim'
+alias v='nvim'
 alias t='todo.sh'
 alias c='cargo'
 alias s='sbt'

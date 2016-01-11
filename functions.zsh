@@ -62,7 +62,7 @@ function tf() {
 
 # I use `vim` to read man pages.
 function man() {
-    \vim -c ":RMan $*" -c ":redraw!"
+    \nvim -c ":RMan $*" -c ":redraw!"
 }
 
 # This function is to tell me version of arbitrary perl module. Just type
