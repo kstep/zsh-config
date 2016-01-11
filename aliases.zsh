@@ -6,11 +6,14 @@ alias lf='ls -F'
 alias ll='ls -lF'
 
 # Change directory aliases
+alias cd-='cd -'
 alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
 alias cd....='cd ../../../..'
 alias cd.....='cd ../../../../..'
+alias cd......='cd ../../../../../..'
+alias cd.......='cd ../../../../../../..'
 
 # I use git, todo.sh and vim constantly, so I put these aliases here.
 alias g='git'
