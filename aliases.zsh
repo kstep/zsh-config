@@ -26,6 +26,7 @@ alias va='vagrant'
 alias d='docker'
 alias o='xdg-open'
 alias l='systemctl --user start xorg-locker'
+alias mr='multirust'
 
 # This is a very old alias for `ps ... | grep`, I started using it on FreeBSD,
 # and the power of habit is so strong, I can't stop using it.
