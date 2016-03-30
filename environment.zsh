@@ -11,7 +11,7 @@ export LESS="-r -S"
 export NODE_PATH="/usr/lib/node_modules"
 
 # PATH extension.
-export PATH="/usr/lib/ruby/gems/1.9.1/bin:$HOME/.multirust/bin:$PATH:$HOME/bin:/opt/android-sdk/platform-tools"
+export PATH="$HOME/.cargo/bin:/usr/lib/ruby/gems/1.9.1/bin:$HOME/.gem/ruby/2.3.0/bin:$PATH:$HOME/bin:/opt/android-sdk/platform-tools"
 
 # This is for Android development.
 export CLASSPATH=/opt/android-sdk/platforms/android-19/android.jar
