@@ -2,9 +2,9 @@
 
 # I use **Vim** as my primary editor, `less` as a pager, **Chromium** with
 # **Vimium** extension for browser experience.
-export EDITOR="/usr/bin/nvim"
+export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
-export BROWSER="/usr/bin/chromium"
+export BROWSER="/usr/bin/google-chrome"
 export LESS="-r -S"
 
 # I like playing around with **NodeJS** sometimes.
