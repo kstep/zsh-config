@@ -12,3 +12,9 @@ for conf in ~/.config/zsh/*.zsh; do
     source $conf
 done
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/kstep/google-cloud-sdk/path.zsh.inc' ]; then . '/home/kstep/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/kstep/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/kstep/google-cloud-sdk/completion.zsh.inc'; fi

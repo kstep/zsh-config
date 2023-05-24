@@ -61,9 +61,9 @@ function tf() {
 }
 
 # I use `vim` to read man pages.
-function man() {
-    \nvim -c ":RMan $*" -c ":redraw!"
-}
+#function man() {
+#    \nvim -c ":RMan $*" -c ":redraw!"
+#}
 
 # This function is to tell me version of arbitrary perl module. Just type
 # `pmver Module::Name` to see Module::Name's version.

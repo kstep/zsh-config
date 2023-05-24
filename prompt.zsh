@@ -43,10 +43,13 @@ prompt_pure_check_cmd_exec_time() {
 
 ASYNC_PROMPT_PROC=0
 precmd() {
+    printf '\033]0;%s\007' "zsh:$PWD"
+
     prompt_pure_check_cmd_exec_time
 
     async() {
         vcs_info
+        printf '\033]0;%s\007' "zsh:$PWD $vcs_info_msg_0_"
         echo "vcs_info_msg_0_='$vcs_info_msg_0_'" > /tmp/prompt-$$.zsh
         kill -s USR1 $$
     }
@@ -67,6 +70,7 @@ TRAPUSR1() {
 }
 
 preexec() {
+    printf '\033]0;%s\007' "$2"
     typeset -g prompt_pure_cmd_timestamp=$EPOCHSECONDS
 }
 
